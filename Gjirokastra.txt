@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Udhëzues Turistik Gjirokastër</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    header { background: #30475e; color: white; padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; }
+    nav ul { display: flex; list-style: none; margin: 0; padding: 0; }
+    nav li { margin-right: 1.5rem; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    section { padding: 2rem; max-width: 1200px; margin: auto; background: white; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .hero { background: url('images/hero-gjirokaster.jpg') center/cover no-repeat; height: 60vh; display: flex; align-items: center; justify-content: center; color: white; text-shadow: 0 0 5px rgba(0,0,0,0.7); }
+    .hero h1 { font-size: 3rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(300px,1fr)); gap: 1rem; }
+    .card { border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); background: white; }
+    .card img { width: 100%; height: 200px; object-fit: cover; }
+    .card-content { padding: 1rem; }
+    #gallery .grid img { width: 100%; height: 200px; object-fit: cover; cursor: pointer; border-radius: 8px; }
+    .lightbox { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; }
+    .lightbox img { max-width: 90%; max-height: 90%; border-radius: 8px; }
+    footer { background: #222831; color: #ddd; text-align: center; padding: 1rem; }
+    .timeline { list-style: none; position: relative; padding-left: 2rem; }
+    .timeline::before { content: ''; position: absolute; left: 1rem; top: 0; bottom: 0; width: 4px; background: #30475e; }
+    .timeline li { margin-bottom: 1rem; position: relative; }
+    .timeline li::before { content: ''; position: absolute; left: -0.3rem; background: #30475e; border-radius: 50%; width: 1rem; height: 1rem; top: 0.2rem; }
+    .map-container iframe { width: 100%; height: 450px; border: 0; }
+    .event { margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Udhëzues Turistik Gjirokastër</h2>
+    <nav>
+      <ul>
+        <li><a href="#about">Rreth</a></li>
+        <li><a href="#attractions">Atraksionet</a></li>
+        <li><a href="#history">Historia</a></li>
+        <li><a href="#cuisine">Kuzhina</a></li>
+        <li><a href="#accommodation">Akomodimi</a></li>
+        <li><a href="#events">Ngjarjet</a></li>
+        <li><a href="#gallery">Galeria</a></li>
+        <li><a href="#map">Harta</a></li>
+        <li><a href="#contact">Kontakti</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="about">
+    <h1>Mirësevini në Gjirokastër</h1>
+  </section>
+
+  <section>
+    <h2>Rreth Gjirokastrës</h2>
+    <p>Gjirokastra, pasuri botërore e UNESCO-s, është qytet me arkitekturë osmane të ruajtur mirë që daton që nga shekulli i 17-të. Labirinthi i rrugicave me kalldrëm dhe shtëpitë karakteristike të gurit ju zhytin në një udhëtim në kohë.</p>
+  </section>
+
+  <section id="attractions">
+    <h2>Atraksionet Kryesore</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/castle.jpg" alt="Kalaja e Gjirokastrës">
+        <div class="card-content">
+          <h3>Kalaja e Gjirokastrës</h3>
+          <p>I ndërtuar në shekullin e 12-të, kjo kala ofron muze artilerie, ekspozita historike dhe pamje panoramike mbi Luginën e Drinit.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/bazaar.jpg" alt="Pazari i Vjetër">
+        <div class="card-content">
+          <h3>Pazari i Vjetër (Qafa e Pazarit)</h3>
+          <p>Qendra historike tregtare e qytetit, me rrugica me kalldrëm, dyqane artizanale dhe dyqane suveniresh.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/skenduli.jpg" alt="Shtëpia Skënduli">
+        <div class="card-content">
+          <h3>Shtëpia Skënduli</h3>
+          <p>Një nga shtëpitë më të ruajtura tradicionale me mobilje origjinale dhe arkitekturë të pasur me detaje.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/kadare_museum.jpg" alt="Muzeu Ismail Kadare">
+        <div class="card-content">
+          <h3>Muzeu Ismail Kadare</h3>
+          <p>Shtëpia e lindjes së shkrimtarit të shquar shqiptar, e shndërruar në muze që tregon jetën dhe veprat e tij.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/drino_hike.jpg" alt="Ecje në Luginën e Drinit">
+        <div class="card-content">
+          <h3>Ecje në Luginën e Drinit</h3>
+          <p>Shtegu malor rreth Drinos ofron pamje të mrekullueshme dhe mundësi për hiking të përshtatshme për të gjitha niveliet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="history">
+    <h2>Historia në Pak Fjalë</h2>
+    <ul class="timeline">
+      <li><strong>12 shekulli:</strong> Themelimi i parë i Kalasë mbi mbetjet e fortifikimeve bizantine.</li>
+      <li><strong>17 shekulli:</strong> Zhvillimi i Pazari të Vjetër si qendër tregtare.</li>
+      <li><strong>19 shekulli:</strong> Ndërtimi i shumicës së shtëpive karakteristike me çati guri.</li>
+      <li><strong>1968:</strong> Organizimi i Festivalit Kombëtar Folklorik për herë të parë.</li>
+      <li><strong>2005:</strong> Përfshirja në listën e Trashëgimisë Botërore të UNESCO-s.</li>
+    </ul>
+  </section>
+
+  <section id="cuisine">
+    <h2>Kuzhina Vendore</h2>
+    <p>Shijoni specat e mbushur me gjizë, byrekun tradicional dhe tave kosi, përgatitet me bulmet origjinale vendore.</p>
+    <div class="grid">
+      <div class="card">
+        <img src="images/shapkat.jpg" alt="Shapkat">
+        <div class="card-content">
+          <h3>Shapkat</h3>
+          <p>Pjekje misri me djathë, spinaq dhe mente, specialitet i Gjirokastrës.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/tave_kosi.jpg" alt="Tave Kosi">
+        <div class="card-content">
+          <h3>Tavë Kosi</h3>
+          <p>Enë me mish qengji dhe kos të pjekur, pjata kombëtare e Shqipërisë.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="accommodation">
+    <h2>Akomodimi</h2>
+    <p>Zgjidh midis hoteleve butik si Caramel Boutique, guesthouse historikë në qendër ose vila familjare në natyrë.</p>
+  </section>
+
+  <section id="events">
+    <h2>Ngjarjet Kryesore</h2>
+    <div class="event">
+      <h3>Festivali Kombëtar Folklorik</h3>
+      <p>24 Qershor - 1 Korrik: Festival çdo pesë vjet në Kalën e Gjirokastrës, me iso-polifoni dhe valle popullore.</p>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Galeria Fotografie</h2>
+    <div class="grid">
+      <img src="images/photo1.jpg" alt="Gjirokastër 1" onclick="openLightbox(this)">
+      <img src="images/photo2.jpg" alt="Gjirokastër 2" onclick="openLightbox(this)">
+      <img src="images/photo3.jpg" alt="Gjirokastër 3" onclick="openLightbox(this)">
+      <img src="images/photo4.jpg" alt="Gjirokastër 4" onclick="openLightbox(this)">
+    </div>
+  </section>
+
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <section id="map" class="map-container">
+    <h2>Harta Interaktive</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18..." allowfullscreen loading="lazy"></iframe>
+  </section>
+
+  <section id="contact">
+    <h2>Kontakti</h2>
+    <p>Për më shumë informacion dhe rezervime:</p>
+    <ul>
+      <li>Email: info@gjirokasterguide.al</li>
+      <li>Tel: +355 69 123 4567</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Gjirokastër Tur Guide. Të gjitha të drejtat e rezervuara.</p>
+  </footer>
+
+  <script>
+    function openLightbox(img) {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
